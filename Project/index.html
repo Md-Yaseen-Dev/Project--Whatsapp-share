@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+      integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+      crossorigin="anonymous"
+    />
+
+    <style>
+      body {
+        margin: 20px;
+        background-color: rgb(41, 123, 155);
+        height: 100vh;
+        text-align: center;
+      }
+
+    
+      nav {
+        position: relative;
+        top: 30%;
+      }
+
+      #input {
+        width: 50%;
+        height: 200px;
+        font-size: 30px;
+        text-align: center;
+        border-radius: 10px;
+        box-shadow: 10px 10px 0px 10px rgba(0, 0, 0, 0.6);
+      }
+      button {
+        position: relative; 
+        top: 40%;
+        width: 25%;
+        height: 50px;
+        background-color: #4ecc5b;
+        color: #fff;
+        border: 1px solid white;
+        font-size: 1rem;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background-color: #3ae04b;
+      }
+    </style>
+  </head>
+
+  <body>
+    <nav class="input">
+      <input id="input" type="text" placeholder="write something" />
+    </nav>
+    <button class="fab fa-whatsapp" onclick="whatsapp()">
+      Share on Whatsapp
+    </button>
+  </body>
+  <script type="text/javascript">
+    function whatsapp() {
+      var msg = document.getElementById("input").value;
+
+      window.open(`whatsapp://send?text=${msg}`);
+    }
+  </script>
+</html>
